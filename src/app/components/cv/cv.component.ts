@@ -16,7 +16,7 @@ export class CvComponent {
       age: 23,
       cin: '12371087',
       job: 'Student',
-      path: 'https://via.placeholder.com/150'
+      path: "assets/ena.jpg"
     },
     {
       id: 2,
@@ -34,9 +34,9 @@ export class CvComponent {
       age: 35,
       cin: '87636621',
       job: 'Engineer',
-      path: 'https://via.placeholder.com/150'
+      path: '     '
     },
-  ];
+  ]; 
 
   selectedCv: Cv | null = null;
 

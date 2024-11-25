@@ -1,5 +1,5 @@
 <div class="cv-item" (click)="selectCv()">
-    <img [src]="cv.path" alt="Profile picture">
+    <img [src]="cv.path | defaultImage:'assets/default-profile.jpg'" alt="{{ cv.firstname }}">
     <div>
       <h4>{{ cv.firstname }} {{ cv.name }}</h4>
       <p>{{ cv.job }}</p>

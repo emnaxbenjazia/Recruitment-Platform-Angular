@@ -4,12 +4,12 @@
     border-radius: 5px;
     padding: 20px;
   }
-  
-  .cv-details img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  .cv-detail img {
+    width: 200px; /* Set fixed width */
+    height: 200px; /* Set fixed height */
+    object-fit: cover; /* Crop the image if needed */
+    border-radius: 10px; /* Optional: for rounded corners */
+    margin-bottom: 10px; /* Optional: for spacing */
   }
   
   .cv-details h2 {

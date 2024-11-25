@@ -1,5 +1,5 @@
-<div *ngIf="cv">
-    <img [src]="cv.path" alt="Profile picture">
+<div class="cv-detail" *ngIf="cv">
+    <img [src]="cv.path | defaultImage:'assets/default-profile.jpg'" alt="Profile Picture">
     <h2>{{ cv.firstname }} {{ cv.name }}</h2>
     <p><strong>Age:</strong> {{ cv.age }}</p>
     <p><strong>CIN:</strong> {{ cv.cin }}</p>

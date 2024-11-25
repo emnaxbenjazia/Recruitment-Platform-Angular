@@ -1,0 +1,4 @@
+<div *ngFor="let cv of cvs">
+    <app-item [cv]="cv" (cvSelected)="selectCv($event)"></app-item>
+  </div>
+  

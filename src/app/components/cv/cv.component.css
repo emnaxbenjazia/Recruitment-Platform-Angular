@@ -1,0 +1,15 @@
+.cv-container {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+  }
+  
+  .cv-list {
+    flex: 1; /* List takes one part of the available space */
+    max-width: 300px; /* Optional: limit the width of the list */
+  }
+  
+  .cv-details {
+    flex: 2; /* Details take twice the space of the list */
+  }
+  

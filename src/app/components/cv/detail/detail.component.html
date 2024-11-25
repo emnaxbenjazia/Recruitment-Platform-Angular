@@ -1,0 +1,8 @@
+<div *ngIf="cv">
+    <img [src]="cv.path" alt="Profile picture">
+    <h2>{{ cv.firstname }} {{ cv.name }}</h2>
+    <p><strong>Age:</strong> {{ cv.age }}</p>
+    <p><strong>CIN:</strong> {{ cv.cin }}</p>
+    <p><strong>Job:</strong> {{ cv.job }}</p>
+  </div>
+  

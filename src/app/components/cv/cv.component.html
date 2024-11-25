@@ -1,0 +1,12 @@
+<div class="cv-container">
+    <!-- List of CVs -->
+    <div class="cv-list">
+      <app-list [cvs]="cvs" (cvSelected)="selectCv($event)"></app-list>
+    </div>
+  
+    <!-- Details of the selected CV -->
+    <div class="cv-details">
+      <app-detail [cv]="selectedCv"></app-detail>
+    </div>
+  </div>
+  

@@ -1,24 +1,52 @@
-.cv-details {
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-  }
-  .cv-detail img {
-    width: 200px; /* Set fixed width */
-    height: 200px; /* Set fixed height */
-    object-fit: cover; /* Crop the image if needed */
-    border-radius: 10px; /* Optional: for rounded corners */
-    margin-bottom: 10px; /* Optional: for spacing */
-  }
-  
-  .cv-details h2 {
-    margin: 0;
-    font-size: 20px;
-  }
-  
-  .cv-details p {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-  
+/* Card container with 3D perspective */
+.card-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+/* Card styling */
+.card {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+/* Rotate card when flipped */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Back face rotation */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 200px; /* Set fixed width */
+  height: 200px; /* Set fixed height */
+  object-fit: cover; /* Crop the image if needed */
+  border-radius: 10px; /* Optional: for rounded corners */
+  margin-bottom: 10px; /* Optional: for spacing */
+}

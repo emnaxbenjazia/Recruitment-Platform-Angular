@@ -3,11 +3,15 @@ import { Cv } from 'C:/Users/ben jazia/TPsFrameworks/RecruitmentPlatform/src/app
 
 @Component({
   selector: 'app-detail',
-  standalone: false,
-  
   templateUrl: './detail.component.html',
-  styleUrl: './detail.component.css'
+  standalone: false,
+  styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent {
-  @Input() cv!: Cv | null;
+  @Input() cv!: Cv;
+  isFlipped = false;
+
+  flipCard(flip: boolean): void {
+    this.isFlipped = flip;
+  }
 }

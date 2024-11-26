@@ -5,9 +5,12 @@
   </div>
 
   <!-- Details of the selected CV -->
-  <div class="cv-details">
+  <div class="cv-details" *ngIf="selectedCv">
     <app-detail [cv]="selectedCv"></app-detail>
-    <!-- Add the Embaucher button below the CV details -->
-    <button *ngIf="selectedCv" (click)="hire(selectedCv)" class="btn">Embaucher</button>
+
+    <!-- Embaucher button below the card -->
+    <div class="embaucher-container">
+      <button (click)="hire(selectedCv)" class="btn">Embaucher</button>
+    </div>
   </div>
 </div>

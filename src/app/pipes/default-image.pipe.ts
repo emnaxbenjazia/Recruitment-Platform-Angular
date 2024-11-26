@@ -5,12 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: false
 })
 export class DefaultImagePipe implements PipeTransform {
-  transform(value: string, defaultPath: string = 'assets/default.jpg'): string {
-    // If value is empty, null, or contains only spaces, return the default image
-    if (!value || value.trim().length === 0) {
-      return defaultPath;
-    }
-    return value; // Otherwise, return the original path
+  transform(value: string | undefined | null, fallback: string): string {
+    return value && value.trim() ? value : fallback;
   }
-
 }

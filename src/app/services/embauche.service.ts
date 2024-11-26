@@ -6,14 +6,19 @@ import { Cv } from '../models/cv.model';
 })
 export class EmbaucheService {
   private hiredCvs: Cv[] = [];
-
-  getHiredCvs(): Cv[] {
-    return this.hiredCvs;
-  }
-
+  
   hire(cv: Cv): void {
     if (!this.hiredCvs.find(hired => hired.id === cv.id)) {
       this.hiredCvs.push(cv);
     }
   }
+
+  isAlreadyHired(cv: Cv): boolean {
+    return this.hiredCvs.some((hiredCv) => hiredCv.id === cv.id); // Compare based on unique `id`
+  }
+  
+  getHiredCvs(): Cv[] {
+    return this.hiredCvs;
+  }
+
 }

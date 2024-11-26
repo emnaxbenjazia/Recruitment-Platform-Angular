@@ -5,10 +5,10 @@
 
     <!-- Front Face -->
     <div class="card-face card-front">
-      <img [src]="cv?.path | defaultImage:'assets/default-profile.jpg'" alt="{{ cv?.firstname }} {{ cv?.name }}">
-      <h2>{{ cv?.firstname }} {{ cv?.name }}</h2>
-      <p>{{ cv?.job }}</p>
-      <blockquote>{{ cv?.quote || 'No quote available.' }}</blockquote>
+      <img [src]="cv.path | defaultImage:'assets/default-profile.jpg'" alt="{{ cv.firstname }} {{ cv.name }}">
+      <h2>{{ cv.firstname }} {{ cv.name }}</h2>
+      <p>{{ cv.job }}</p>
+      <blockquote>{{ cv.quote || 'No quote available.' }}</blockquote>
     </div>
 
 
@@ -16,10 +16,10 @@
     <!-- Back Face -->
     <div class="card-face card-back">
       <h3>Job Description</h3>
-      <p>{{ cv?.jobDescription || 'No job description available.' }}</p>
-      <p><strong>Projects:</strong> {{ cv?.projects || 0 }}</p>
-      <p><strong>Age:</strong> {{ cv?.age }}</p>
-      <p><strong>CIN:</strong> {{ cv?.cin }}</p>
+      <p>{{ cv.jobDescription || 'No job description available.' }}</p>
+      <p><strong>Projects:</strong> {{ cv.projects || 0 }}</p>
+      <p><strong>Age:</strong> {{ cv.age }}</p>
+      <p><strong>CIN:</strong> {{ cv.cin }}</p>
 
     </div>
 

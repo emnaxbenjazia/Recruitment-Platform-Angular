@@ -8,6 +8,7 @@ import { ListComponent } from './components/cv/list/list.component';
 import { ItemComponent } from './components/cv/item/item.component';
 import { DetailComponent } from './components/cv/detail/detail.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { HiredListComponent } from './components/hired-list/hired-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     ListComponent,
     ItemComponent,
     DetailComponent,
-    DefaultImagePipe
+    DefaultImagePipe,
+    HiredListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,46 +1,33 @@
-import { Component } from '@angular/core';
-import { Cv } from 'C:/Users/ben jazia/TPsFrameworks/RecruitmentPlatform/src/app/models/cv.model';
+import { Component, OnInit } from '@angular/core';
+import { CvService } from '../../services/cv.service';
+import { EmbaucheService } from '../../services/embauche.service';
+import { Cv } from '../../models/cv.model';
 
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   standalone: false,
-  styleUrls: ['./cv.component.css']
+  styleUrls: ['./cv.component.css'],
 })
-export class CvComponent {
-  cvs: Cv[] = [
-    {
-      id: 1,
-      name: 'Ben Jazia',
-      firstname: 'Emna',
-      age: 23,
-      cin: '12371087',
-      job: 'Student',
-      path: "assets/ena.jpg"
-    },
-    {
-      id: 2,
-      name: 'Chaaben',
-      firstname: 'Nour',
-      age: 25,
-      cin: '87654321',
-      job: 'Doctor',
-      path: 'https://via.placeholder.com/150'
-    },
-    {
-      id: 3,
-      name: 'ouederni',
-      firstname: 'ahmed',
-      age: 35,
-      cin: '87636621',
-      job: 'Engineer',
-      path: '     '
-    },
-  ]; 
+export class CvComponent implements OnInit {
+  cvs: Cv[] = [];
+  selectedCv: Cv | null = null; 
 
-  selectedCv: Cv | null = null;
+  constructor(
+    private cvService: CvService,
+    private embaucheService: EmbaucheService
+  ) {}
 
+  ngOnInit(): void {
+    this.cvs = this.cvService.getCvs();
+  }
+    // Method to set the selected CV
   selectCv(cv: Cv): void {
     this.selectedCv = cv;
+  }
+
+
+  hire(cv: Cv): void {
+    this.embaucheService.hire(cv);
   }
 }

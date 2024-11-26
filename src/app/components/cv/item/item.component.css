@@ -1,7 +1,29 @@
+.cv-item {
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  margin: 10px 0; /* Add spacing between items */
+  border: 1px solid #ccc; /* Optional: add a border for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Space inside the container */
+}
+
 .cv-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
-    border-radius: 10px; /* Optional: adds rounded corners */
-  }
-  
+  width: 50px; /* Adjust the size of the photo */
+  height: 50px;
+  border-radius: 50%; /* Make the photo circular */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.cv-details {
+  flex: 1; /* Make the text area flexible */
+}
+
+.cv-details h4 {
+  margin: 0;
+  font-size: 16px; /* Adjust text size */
+}
+
+.cv-details p {
+  margin: 0;
+  color: #666; /* Optional: change text color for job title */
+}

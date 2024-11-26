@@ -1,0 +1,5 @@
+<h2>Liste des personnes pré-sélectionnées :</h2>
+<div *ngFor="let cv of hiredCvs" class="hired-card">
+  <img [src]="cv.path | defaultImage:'assets/default-profile.jpg'" alt="{{ cv.firstname }} {{ cv.name }}" />
+  <p>{{ cv.firstname }} {{ cv.name }}</p>
+</div>

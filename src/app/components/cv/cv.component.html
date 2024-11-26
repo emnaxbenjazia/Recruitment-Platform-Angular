@@ -1,12 +1,13 @@
 <div class="cv-container">
-    <!-- List of CVs -->
-    <div class="cv-list">
-      <app-list [cvs]="cvs" (cvSelected)="selectCv($event)"></app-list>
-    </div>
-  
-    <!-- Details of the selected CV -->
-    <div class="cv-details">
-      <app-detail [cv]="selectedCv"></app-detail>
-    </div>
+  <!-- List of CVs -->
+  <div class="cv-list">
+    <app-list [cvs]="cvs" (cvSelected)="selectCv($event)"></app-list>
   </div>
-  
+
+  <!-- Details of the selected CV -->
+  <div class="cv-details">
+    <app-detail [cv]="selectedCv"></app-detail>
+    <!-- Add the Embaucher button below the CV details -->
+    <button *ngIf="selectedCv" (click)="hire(selectedCv)" class="btn">Embaucher</button>
+  </div>
+</div>
